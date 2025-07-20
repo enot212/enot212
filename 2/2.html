@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Таблица</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 600px;
+      text-align: center;
+    }
+    td {
+      border: 1px solid black;
+      padding: 20px;
+      vertical-align: middle;
+    }
+    /* Верхний ряд: жирный шрифт и центрирование */
+    .top {
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* Средний ряд: выравнивание текста */
+    .right {
+      text-align: right;
+    }
+
+    .left {
+      text-align: left;
+    }
+
+    /* Нижний ряд: разные выравнивания */
+    .bottom-left {
+      text-align: left;
+    }
+
+    .bottom-center {
+      text-align: center;
+    }
+
+    .bottom-right {
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <td class="top">ячейка 1</td>
+    <td class="top">ячейка 2</td>
+    <td class="top">ячейка 3</td>
+  </tr>
+  <tr>
+    <td class="right">ячейка 4</td>
+    <td class="left">ячейка 5</td>
+    <td class="left">ячейка 6</td>
+  </tr>
+  <tr>
+    <td class="bottom-left">ячейка 7</td>
+    <td class="bottom-center">ячейка 8</td>
+    <td class="bottom-right">ячейка 9</td>
+  </tr>
+</table>
+
+</body>
+</html>
