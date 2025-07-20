@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Что нужно знать, чтобы делать сайты</title>
+  <style>
+    /* СТАРЫЕ СТИЛИ ДЛЯ <p> — закомментированы
+    p {
+      font-style: italic;
+      font-size: 15px;
+      text-align: justify;
+      font-family: Arial, sans-serif;
+      line-height: 30px;
+    }
+    */
+
+    /* ✅ Новый стиль для <p> */
+    p {
+      font: italic bold 16px Arial, sans-serif;
+      line-height: 30px;
+    }
+
+    /* ✅ Новый стиль для <h1> */
+    h1 {
+      font: normal 20px Verdana, sans-serif;
+      text-align: center;
+    }
+
+    h2 {
+      font-style: italic;
+      font-weight: normal;
+      font-size: 20px;
+      text-align: right;
+      width: 300px;
+      font-family: 'Times New Roman', serif;
+    }
+
+    h3 {
+      color: orange;
+      font-family: 'Segoe UI', Verdana, sans-serif;
+    }
+
+    th {
+      text-align: left;
+    }
+
+    td {
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Что нужно знать, чтобы делать сайты</h1>
+
+<ol>
+  <li><b>HTML</b></li>
+  <li><em>CSS</em></li>
+  <li>PHP</li>
+  <li>SQL</li>
+  <li>JavaScript</li>
+  <li>iQuery</li>
+  <li>Flash</li>
+  <li>SEO</li>
+</ol>
+
+<h2>PHP и JavaScript</h2>
+<p>
+  Языки программирования <b>PHP </b> и <b>JavaScript</b> позволяют сделать сайт динамичным, то есть реагирующим на действия пользователя. Например, можно сделать красивую выпадающую менюшку или слайдер.
+</p>
+
+<h2>Виды скриптов</h2>
+<p style="text-align: center;">
+  Для этого пишутся скрипты (англ. <em>script</em> — "сценарий") — программы, позволяющие реагировать на действия пользователя. Скрипты бывают двух видов:
+</p>
+
+<ul>
+  <li>Скрипты, которые выполняются на сервере. Это PHP.</li>
+  <li>Скрипты, которые выполняются в браузере. Это JavaScript.</li>
+</ul>
+
+<h3>Дополнительный раздел</h3>
+
+<div class="PerviyClass">Пример привязки класса</div>
+<div id="PerviyId">Названия классов и идентификаторов чувствительны к регистру</div>
+<div id="PerviyID">Если регистр отличается — стили не применятся</div>
+
+<table style="width: 400px; height: 200px;">
+  <tr>
+    <th>номер</th>
+    <th>тег</th>
+    <th>значение</th>
+  </tr>
+  <tr><td>1</td><td>p</td><td>абзац</td></tr>
+  <tr><td>2</td><td>a</td><td>ссылка</td></tr>
+  <tr><td>3</td><td>b</td><td>жирный текст</td></tr>
+  <tr><td>4</td><td>i</td><td>курсив</td></tr>
+  <tr><td>5</td><td>table</td><td>таблица</td></tr>
+  <tr><td>6</td><td>tr</td><td>ряд таблицы</td></tr>
+  <tr><td>7</td><td>td</td><td>ячейка таблицы</td></tr>
+  <tr><td>8</td><td>th</td><td>заголовок таблицы</td></tr>
+</table>
+
+</body>
+</html>

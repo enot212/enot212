@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Образец страницы</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      font-weight: bold;
+      font-size: 24px;
+      background-color: #ccc;
+      padding: 5px;
+    }
+
+    ol {
+      margin-top: 10px;
+    }
+
+    ol li {
+      margin-bottom: 4px;
+    }
+
+    ol li:nth-child(1) {
+      color: red;
+      font-weight: bold;
+    }
+
+    ol li:nth-child(2) {
+      font-style: italic;
+      color: blue;
+    }
+
+    ol li:nth-child(n+3) {
+      color: red;
+    }
+
+    h2 {
+      color: darkgreen;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+
+    p {
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+
+    /* Стиль для красных жирных слов внутри текста */
+    .red-bold {
+      color: red;
+      font-weight: bold;
+    }
+
+    /* Стиль для синих курсивных слов внутри текста */
+    .blue-italic {
+      color: blue;
+      font-style: italic;
+    }
+
+    /* Стили для списка внутри параграфа с красным текстом и курсивом */
+    ul li {
+      font-style: italic;
+      color: brown;
+      margin-bottom: 8px;
+    }
+
+    ul li .red-bold {
+      font-weight: bold;
+    }
+
+    ul li .cms {
+      font-weight: bold;
+      font-style: normal;
+    }
+
+  </style>
+</head>
+<body>
+
+<h1>Что нужно знать, чтобы делать сайты</h1>
+
+<ol>
+  <li>HTML</li>
+  <li><span class="blue-italic">CSS</span></li>
+  <li>PHP</li>
+  <li>SQL</li>
+  <li>JavaScript</li>
+  <li>jQuery</li>
+  <li>Flash</li>
+  <li>SEO</li>
+</ol>
+
+<h2>PHP и JavaScript</h2>
+<p>
+  Языки программирования <span class="red-bold">PHP</span> и <span class="red-bold">JavaScript</span> позволяют сделать сайт динамичным, то есть реагирующим на действия пользователя. Например, можно сделать красивую выпадающую менюшку или слайдер
+</p>
+
+<h2>Виды скриптов</h2>
+<p>
+  Для этого пишутся скрипты (англ. <span class="blue-italic">script</span> - "сценарий") - программы, позволяющие реагировать на действия пользователя. Скрипты бывают двух видов:
+</p>
+
+<ul>
+  <li>те, которые выполняются на сервере, а результат их выполнения приходит в браузер к пользователю уже в готовом виде. Это скрипты, написанные на языке <span class="red-bold">PHP</span>. На нем пишутся <span class="cms">CMS-ки</span> — системы управления контентом.</li>
+  <li>те, которые выполняются прямо в браузере пользователя. Это скрипты, написанные на языке <span class="red-bold">JavaScript</span>. Они чаще всего используются для того, чтобы сделать страницу более удобной и красивой.</li>
+</ul>
+
+</body>
+</html>
