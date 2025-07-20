@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Меню с подсветкой</title>
+    <style>
+        body {
+            background: #fdf8f8; /* для контраста */
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            background-color: #FC9D00;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding-left: 13px; /* отступ слева */
+            display: flex;
+        }
+        li {
+            margin: 0;
+        }
+        a {
+            display: block;
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 13px;
+            line-height: 35px;
+            padding: 0 13px;
+        }
+        /* Первый вариант - обычный фон */
+        nav:first-of-type a {
+            background: #FC9D00;
+        }
+        /* Второй вариант */
+        nav:last-of-type a {
+            background: #FC9D00;
+            transition: background-color 0.3s;
+        }
+        nav:last-of-type a:hover,
+        nav:last-of-type a.active {
+            background-color: #E93301;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Первый вариант -->
+<nav>
+    <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#">PHOTOS</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">LINKS</a></li>
+        <li><a href="#">CONTACT</a></li>
+    </ul>
+</nav>
+
+<!-- Второй вариант -->
+<nav>
+    <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#" class="active">BLOG</a></li>
+        <li><a href="#">PHOTOS</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">LINKS</a></li>
+        <li><a href="#">CONTACT</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>

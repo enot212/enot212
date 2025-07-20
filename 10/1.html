@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ссылки при наведении</title>
+    <style>
+        body {
+            background-color: #f3f4fa;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .block {
+            display: inline-block;
+            background-color: white;
+            padding: 10px 20px;
+            margin: 20px 10px;
+            border: 1px solid black;
+            font: 13px Arial;
+        }
+
+        .block a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .hover-effect a:hover {
+            color: red;
+        }
+
+        .hover-effect .highlight {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="block">
+    <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Новости</a></li>
+        <li><a href="#">Контакты</a></li>
+        <li><a href="#">О компании</a></li>
+        <li><a href="#">Как добраться</a></li>
+    </ul>
+</div>
+
+<div class="block hover-effect">
+    <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a class="highlight" href="#">Новости</a></li>
+        <li><a href="#">Контакты</a></li>
+        <li><a href="#">О компании</a></li>
+        <li><a href="#">Как добраться</a></li>
+    </ul>
+</div>
+
+</body>
+</html>

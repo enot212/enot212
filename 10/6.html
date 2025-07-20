@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Меню</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .menu {
+            font: 13px Arial, sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .menu li {}
+
+        .menu a {
+            text-decoration: none;
+            color: blue;
+            border: 1px solid #1A31A2;
+            padding: 5px;
+            display: inline-block;
+        }
+
+        /* Активная кнопка в первом варианте */
+        .menu.variant1 a.active {
+            color: #fff;
+            background-color: #484848;
+            border-color: black;
+        }
+
+        /* Второй вариант */
+        .menu.variant2 a {
+            color: blue;
+            border: 1px solid #1A31A2;
+            padding: 5px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .menu.variant2 a:hover {
+            color: #fff;
+            background-color: #484848;
+            border-color: black;
+        }
+
+        .menu.variant2 a.active {
+            color: #fff;
+            background-color: #484848;
+            border-color: black;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Первый вариант -->
+<nav class="menu variant1">
+    <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#" class="active">Новости</a></li>
+        <li><a href="#">Контакты</a></li>
+        <li><a href="#">О компании</a></li>
+        <li><a href="#">Как добраться</a></li>
+    </ul>
+</nav>
+
+<!-- Второй вариант -->
+<nav class="menu variant2">
+    <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#" class="active">Новости</a></li>
+        <li><a href="#">Контакты</a></li>
+        <li><a href="#">О компании</a></li>
+        <li><a href="#">Как добраться</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>

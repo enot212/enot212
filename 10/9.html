@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Календарь</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            display: flex;
+            gap: 30px;
+            background: white;
+        }
+        table {
+            width: 150px;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 12px;
+        }
+        thead th {
+            color: #506361;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 4px;
+            text-align: center;
+            font-weight: normal;
+        }
+        tbody td {
+            text-align: center;
+            padding: 3px 0;
+            color: #506361;
+            cursor: pointer;
+        }
+        /* Выходные (Сб и Вс) */
+        tbody td.sat, tbody td.sun {
+            color: #8CA2C1;
+        }
+        /* Праздничный день (7) */
+        tbody td.holiday {
+            color: red;
+        }
+        /* Подчеркивание при наведении (только для второго календаря) */
+        .variant2 tbody td:hover {
+            border-bottom: 1px solid;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Первый календарь -->
+<table>
+    <thead>
+    <tr>
+        <th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Вс</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td></td><td></td><td></td><td></td><td>1</td><td class="sat">2</td><td class="sun">3</td>
+    </tr>
+    <tr>
+        <td>4</td><td>5</td><td class="holiday">7</td><td>8</td><td>9</td><td class="sat">10</td><td class="sun">11</td>
+    </tr>
+    <tr>
+        <td>12</td><td class="sat">13</td><td class="sun">14</td><td>15</td><td>16</td><td class="sat">17</td><td class="sun">18</td>
+    </tr>
+    <tr>
+        <td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td class="sat">24</td><td class="sun">25</td>
+    </tr>
+    <tr>
+        <td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- Второй календарь с подчеркиванием при наведении -->
+<table class="variant2">
+    <thead>
+    <tr>
+        <th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Вс</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td></td><td></td><td></td><td></td><td>1</td><td class="sat">2</td><td class="sun">3</td>
+    </tr>
+    <tr>
+        <td>4</td><td>5</td><td class="holiday">7</td><td>8</td><td>9</td><td class="sat">10</td><td class="sun">11</td>
+    </tr>
+    <tr>
+        <td>12</td><td class="sat">13</td><td class="sun">14</td><td>15</td><td>16</td><td class="sat">17</td><td class="sun">18</td>
+    </tr>
+    <tr>
+        <td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td class="sat">24</td><td class="sun">25</td>
+    </tr>
+    <tr>
+        <td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

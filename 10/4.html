@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Меню с иконкой самолета</title>
+  <style>
+    body {
+      background-color: #fdfeff;
+      font-family: Arial, sans-serif;
+    }
+
+    .menu-block {
+      display: inline-block;
+      background-color: white;
+      padding: 5px;
+      margin: 10px;
+      font: 13px Arial;
+    }
+
+    ul {
+      padding: 5px;
+      margin: 0;
+    }
+
+    li {
+      list-style: none;
+      margin: 5px 0;
+    }
+
+    a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      background-color: #0081E7;
+      border: 1px solid #0081E7;
+      padding: 0px 5px;
+      line-height: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      height: 30px;
+    }
+
+    a img {
+      display: none;
+      width: 16px;
+      height: 16px;
+    }
+
+    /* Активная кнопка */
+    .active {
+      background-color: white;
+      color: #0081E7;
+    }
+
+    .active img {
+      display: inline;
+    }
+
+    /* Наведение */
+    .hover-effect a:hover {
+      background-color: white;
+      color: #0081E7;
+    }
+
+    .hover-effect a:hover img {
+      display: inline;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Первый блок — "Новости" активна -->
+<div class="menu-block">
+  <ul>
+    <li><a href="#"><span>Главная</span></a></li>
+    <li><a href="#" class="active"><span>Новости</span><img src="https://github.com/KinShish/learning_task/raw/master/10/img/blue.png" alt="plane"></a></li>
+    <li><a href="#"><span>Контакты</span></a></li>
+    <li><a href="#"><span>О компании</span></a></li>
+    <li><a href="#"><span>Как добраться</span></a></li>
+  </ul>
+</div>
+
+<!-- Второй блок — при наведении -->
+<div class="menu-block hover-effect">
+  <ul>
+    <li><a href="#"><span>Главная</span></a></li>
+    <li><a href="#"><span>Новости</span><img src="https://github.com/KinShish/learning_task/raw/master/10/img/blue.png" alt="plane"></a></li>
+    <li><a href="#"><span>Контакты</span><img src="https://github.com/KinShish/learning_task/raw/master/10/img/blue.png" alt="plane"></a></li>
+    <li><a href="#"><span>О компании</span></a></li>
+    <li><a href="#"><span>Как добраться</span></a></li>
+  </ul>
+</div>
+
+</body>
+</html>
+

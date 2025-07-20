@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Два варианта меню</title>
+  <style>
+    body {
+      background-color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 15px 0; /* Отступ снизу между меню */
+      display: flex;
+      gap: 5px;
+    }
+
+    ul li {
+      border: 1px solid #1A31A2;
+      padding: 5px;
+      font: 13px Arial, sans-serif;
+    }
+
+    /* Первый вариант: синие ссылки, без hover */
+    .menu1 li a {
+      color: blue;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    /* Второй вариант: синие ссылки с hover красным */
+    .menu2 li a {
+      color: blue;
+      text-decoration: none;
+      display: inline-block;
+      transition: color 0.3s;
+    }
+
+    .menu2 li a:hover {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Первый вариант -->
+<ul class="menu1">
+  <li><a href="#">Главная</a></li>
+  <li><a href="#">Новости</a></li>
+  <li><a href="#">Контакты</a></li>
+  <li><a href="#">О компании</a></li>
+  <li><a href="#">Как добраться</a></li>
+</ul>
+
+<!-- Второй вариант -->
+<ul class="menu2">
+  <li><a href="#">Главная</a></li>
+  <li><a href="#">Новости</a></li>
+  <li><a href="#">Контакты</a></li>
+  <li><a href="#">О компании</a></li>
+  <li><a href="#">Как добраться</a></li>
+</ul>
+
+</body>
+</html>

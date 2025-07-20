@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Меню при наведении</title>
+  <style>
+    body {
+      background-color: #f4f4f6;
+      font-family: Arial, sans-serif;
+    }
+
+    .menu-block {
+      display: inline-block;
+      background-color: white;
+      padding: 5px;
+      margin: 10px;
+      font: bold 13px Arial;
+    }
+
+    ul {
+      padding: 5px;
+      margin: 0;
+    }
+
+    li {
+      list-style-type: none;
+      margin: 5px 0;
+    }
+
+    a {
+      display: block;
+      color: white;
+      background-color: #484848;
+      border: 1px solid #170707;
+      padding: 0px 5px;
+      line-height: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hover-invert a:hover {
+      color: #484848;
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Первый блок -->
+<div class="menu-block">
+  <ul>
+    <li><a href="#">Главная</a></li>
+    <li><a href="#">Новости</a></li>
+    <li><a href="#">Контакты</a></li>
+    <li><a href="#">О компании</a></li>
+    <li><a href="#">Как добраться</a></li>
+  </ul>
+</div>
+
+<!-- Второй блок с эффектом инверсии -->
+<div class="menu-block hover-invert">
+  <ul>
+    <li><a href="#">Главная</a></li>
+    <li><a href="#">Новости</a></li>
+    <li><a href="#">Контакты</a></li>
+    <li><a href="#">О компании</a></li>
+    <li><a href="#">Как добраться</a></li>
+  </ul>
+</div>
+
+</body>
+</html>

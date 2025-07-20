@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Меню с иконками</title>
+    <style>
+        body {
+            background-color: #f8f4f4; /* Для контраста */
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            margin-top: 30px; /* внутренний отступ сверху */
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 13px; /* Отступ справа у списка */
+        }
+
+        /* Первая строка: серые иконки и текст */
+        .menu1 li {
+            display: flex;
+            align-items: center;
+            color: #CBCBCB; /* цвет шрифта */
+            font-size: 13px;
+            user-select: none;
+        }
+
+        .menu1 li img {
+            margin-right: 6px; /* отступ для иконки */
+            opacity: 0.3;
+        }
+
+        /* Вторая строка: с активным пунктом и эффектом наведения */
+        .menu2 li {
+            display: flex;
+            align-items: center;
+            color: #CBCBCB; /* исходный цвет */
+            font-size: 13px;
+            user-select: none;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .menu2 li img {
+            margin-right: 6px;
+            opacity: 0.3;
+            transition: opacity 0.3s ease;
+        }
+
+        .menu2 li:hover,
+        .menu2 li.active {
+            color: #039CFF;
+        }
+
+        .menu2 li:hover img,
+        .menu2 li.active img {
+            opacity: 1;
+            filter: none; /* чтобы иконка была насыщенной */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Первая строка -->
+<nav>
+    <ul class="menu1">
+        <li><img src="https://github.com/KinShish/learning_task/raw/master/10/img/1.png" alt="авиабилеты" width="24" height="24"> авиабилеты</li>
+        <li><img src="https://github.com/KinShish/learning_task/raw/master/10/img/2.png" alt="чартэры" width="24" height="24"> чартэры</li>
+        <li><img src="https://github.com/KinShish/learning_task/raw/master/10/img/3.png" alt="ж/д билеты" width="24" height="24"> ж/д билеты</li>
+        <li><img src="https://github.com/KinShish/learning_task/raw/master/10/img/4.png" alt="гостиницы" width="24" height="24"> гостиницы</li>
+        <li><img src="https://github.com/KinShish/learning_task/raw/master/10/img/7.jpg" alt="туризм" width="24" height="24"> туризм</li>
+    </ul>
+</nav>
+
+<!-- Вторая строка -->
+<nav>
+    <ul class="menu2">
+        <li><img src="https://github.com/KinShish/learning_task/raw/master/10/img/1.png" alt="авиабилеты" width="24" height="24"> авиабилеты</li>
+        <li class="active"><img src="https://github.com/KinShish/learning_task/raw/master/10/img/2-h.png" alt="чартэры" width="24" height="24"> чартэры</li>
+        <li><img src="https://github.com/KinShish/learning_task/raw/master/10/img/3.png" alt="ж/д билеты" width="24" height="24"> ж/д билеты</li>
+        <li><img src="https://github.com/KinShish/learning_task/raw/master/10/img/4.png" alt="гостиницы" width="24" height="24"> гостиницы</li>
+        <li><img src="https://github.com/KinShish/learning_task/raw/master/10/img/7.jpg" alt="туризм" width="24" height="24"> туризм</li>
+    </ul>
+</nav>
+
+</body>
+</html>
