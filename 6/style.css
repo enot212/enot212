@@ -1,0 +1,89 @@
+/* 1. Абзацы внутри <div> */
+div p {
+  color: blue;
+}
+
+/* 2. Все <h2> внутри <div> */
+div h2 {
+  color: green;
+}
+
+/* 3. Все <p> из #test */
+#test p {
+  font-weight: bold;
+}
+
+/* 4. Все <h2> из #test */
+#test h2 {
+  text-decoration: underline;
+}
+
+/* 5. Все элементы с классом bbb */
+.bbb {
+  background-color: lightyellow;
+}
+
+/* 6. Все элементы с классом bbb внутри #test */
+#test .bbb {
+  border: 1px solid red;
+}
+
+/* 7. Все <p> с классом bbb */
+p.bbb {
+  font-style: italic;
+}
+
+/* 8. Все <h2> с классом bbb */
+h2.bbb {
+  text-transform: uppercase;
+}
+
+/* 9. Все <p> с классом bbb из #test */
+#test p.bbb {
+  background-color: pink;
+}
+
+/* 10. Все элементы с классом bbb и xxx */
+.bbb,
+.xxx {
+  padding: 5px;
+}
+
+/* 11. Все <p> с классом bbb и <h2> с классом xxx */
+p.bbb,
+h2.xxx {
+  border-bottom: 2px dashed gray;
+}
+
+/* 12. <p> с классом bbb и xxx из #test */
+#test p.bbb,
+#test p.xxx {
+  margin-left: 20px;
+}
+
+/* 13. Все элементы из .fff */
+.fff * {
+  color: darkred;
+}
+
+/* 14. Все <p> из .fff */
+.fff p {
+  font-size: 18px;
+}
+
+/* 15. Все <p> с классом fff */
+p.fff {
+  font-size: 22px;
+  color: darkblue;
+}
+
+/* 16. Все элементы с классом bbb из .fff */
+.fff .bbb {
+  background-color: lightgreen;
+}
+
+/* 17. Все <h2> с классом bbb из .fff */
+.fff h2.bbb {
+  border-left: 5px solid orange;
+}
+
