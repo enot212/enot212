@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Меню с активным пунктом и футером</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 700px;
+            margin: 30px auto;
+            border: 1px solid #000;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            background-color: #484848;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .menu li a {
+            display: block;
+            color: white;
+            font: bold 13px Arial, sans-serif;
+            padding: 0px 5px;
+            text-decoration: none;
+            line-height: 30px;
+            background-color: #484848;
+            transition: 0.2s;
+        }
+
+        .menu li a:hover {
+            background-color: white;
+            color: #484848;
+        }
+
+        .menu li a.active {
+            background-color: white;
+            color: #484848;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .bold {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Первый блок — обычный -->
+<div class="container">
+    <ul class="menu">
+        <li><a href="#"class="active">Главная</a></li>
+        <li><a href="#">Новости</a></li>
+        <li><a href="#">Контакты</a></li>
+        <li><a href="#">О компании</a></li>
+        <li><a href="#">Как добраться</a></li>
+    </ul>
+
+    <h1>Vestibulum ante ipsum</h1>
+
+    <p>Vestibulum ante ipsum primis <span class="bold">in faucibus orci luctus</span> et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin eu fermentum diam, vitae faucibus ligula. Nam nec risus sed nisi porttitor ullamcorper iaculis ac nulla. Sed condimentum nisi in tincidunt adipiscing. Mauris vehicula mollis consequat. Vivamus non accumsan tortor. Aliquam dictum justo et augue viverra, vel interdum lorem pharetra.</p>
+
+    <p>Nullam id faucibus ante. <span class="bold">Proin tristique lorem</span> tristique dolor porttitor, eget adipiscing leo gravida. Proin erat erat, laoreet sit amet tincidunt ac, iaculis nec libero. In placerat odio ac dapibus faucibus. Praesent ut est in ligula facilisis congue eget ac ante. Phasellus at felis vitae est molestie ultricies.</p>
+
+    <footer>Aenean eu auctor diam, et euismod nulla. Nulla lacinia ultricies accumsan © site.ru</footer>
+</div>
+
+<!-- Второй блок — активная "Новости" -->
+<div class="container">
+    <ul class="menu">
+        <li><a href="#"class="active">Главная</a></li>
+        <li><a href="#">Новости</a></li>
+        <li><a href="#">Контакты</a></li>
+        <li><a href="#">О компании</a></li>
+        <li><a href="#">Как добраться</a></li>
+    </ul>
+
+    <h1>Vestibulum ante ipsum</h1>
+
+    <p>Vestibulum ante ipsum primis <span class="bold">in faucibus orci luctus</span> et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin eu fermentum diam, vitae faucibus ligula. Nam nec risus sed nisi porttitor ullamcorper iaculis ac nulla. Sed condimentum nisi in tincidunt adipiscing. Mauris vehicula mollis consequat. Vivamus non accumsan tortor. Aliquam dictum justo et augue viverra, vel interdum lorem pharetra.</p>
+
+    <p>Nullam id faucibus ante. <span class="bold">Proin tristique lorem</span> tristique dolor porttitor, eget adipiscing leo gravida. Proin erat erat, laoreet sit amet tincidunt ac, iaculis nec libero. In placerat odio ac dapibus faucibus. Praesent ut est in ligula facilisis congue eget ac ante. Phasellus at felis vitae est molestie ultricies.</p>
+
+    <footer>Aenean eu auctor diam, et euismod nulla. Nulla lacinia ultricies accumsan © site.ru</footer>
+</div>
+
+</body>
+</html>

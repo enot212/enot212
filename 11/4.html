@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Два состояния меню</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 700px;
+      margin: 30px auto;
+      border: 1px solid #000;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    /* Меню */
+    .menu {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+      background-color: #484848;
+    }
+
+    .menu li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .menu li a {
+      display: block;
+      color: white;
+      font: bold 13px Arial, sans-serif;
+      padding: 0px 5px;
+      text-decoration: none;
+      line-height: 30px;
+      background-color: #484848;
+      transition: 0.2s;
+    }
+
+    .menu li a:hover {
+      background-color: white;
+      color: #484848;
+    }
+
+    /* Эмулируем hover для второго блока */
+    .hovered {
+      background-color: white !important;
+      color: #484848 !important;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    p {
+      text-align: justify;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .blue {
+      color: blue;
+    }
+
+    .bold-blue {
+      color: blue;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Первый блок — обычное меню -->
+<div class="container">
+  <ul class="menu">
+    <li><a href="#">Главная</a></li>
+    <li><a href="#">Новости</a></li>
+    <li><a href="#">Контакты</a></li>
+    <li><a href="#">О компании</a></li>
+    <li><a href="#">Как добраться</a></li>
+  </ul>
+
+  <h1>Proin tristique lorem</h1>
+
+  <p>Lorem ipsum dolor <span class="blue">sit</span> <span class="blue">amet</span>, consectetur adipiscing elit. Nulla pharetra risus erat, eu imperdiet felis suscipit at. Vivamus rhoncus vel neque non eleifend. Donec adipiscing eros quis molestie sodales. Proin vitae nulla ut sem lobortis scelerisque. Aliquam ultricies porta sem quis fringilla. Quisque pretium enim ut elit fringilla, in adipiscing ligula placerat. Integer id tortor tristique, facilisis lorem sit amet, porta ante. Nulla eget diam in erat hendrerit gravida.</p>
+
+  <p>Cras ut nunc metus. Nullam id faucibus ante. <span class="bold-blue">Proin tristique lorem</span> tristique dolor porttitor, eget adipiscing leo gravida. Proin erat erat, laoreet sit amet tincidunt ac, iaculis nec libero. In placerat odio ac dapibus faucibus. Praesent ut est in ligula facilisis congue eget ac ante. Phasellus at felis vitae est molestie ultricies.</p>
+</div>
+
+<!-- Второй блок — имитация наведения -->
+<div class="container">
+  <ul class="menu">
+    <li><a href="#">Главная</a></li>
+    <li><a href="#" class="hovered">Новости</a></li>
+    <li><a href="#">Контакты</a></li>
+    <li><a href="#">О компании</a></li>
+    <li><a href="#">Как добраться</a></li>
+  </ul>
+
+  <h1>Proin tristique lorem</h1>
+
+  <p>Lorem ipsum dolor <span class="blue">sit</span> <span class="blue">amet</span>, consectetur adipiscing elit. Nulla pharetra risus erat, eu imperdiet felis suscipit at. Vivamus rhoncus vel neque non eleifend. Donec adipiscing eros quis molestie sodales. Proin vitae nulla ut sem lobortis scelerisque. Aliquam ultricies porta sem quis fringilla. Quisque pretium enim ut elit fringilla, in adipiscing ligula placerat. Integer id tortor tristique, facilisis lorem sit amet, porta ante. Nulla eget diam in erat hendrerit gravida.</p>
+
+  <p>Cras ut nunc metus. Nullam id faucibus ante. <span class="bold-blue">Proin tristique lorem</span> tristique dolor porttitor, eget adipiscing leo gravida. Proin erat erat, laoreet sit amet tincidunt ac, iaculis nec libero. In placerat odio ac dapibus faucibus. Praesent ut est in ligula facilisis congue eget ac ante. Phasellus at felis vitae est molestie ultricies.</p>
+</div>
+
+</body>
+</html>
