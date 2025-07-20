@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Списки</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #444;
+            margin: 25px 0 15px 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        ul, ol {
+            padding-left: 30px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .nested-list {
+            padding-left: 20px;
+            list-style-type: '- ';
+        }
+    </style>
+</head>
+<body>
+<h1>Списки</h1>
+
+<h2>Список цветов</h2>
+<ul>
+    <li>Красный</li>
+    <li>Желтый</li>
+    <li>Зеленый</li>
+    <li>Синий</li>
+</ul>
+
+<h2>Список студентов</h2>
+<ol>
+    <li>Иванов</li>
+    <li>Петров</li>
+    <li>Сидоров</li>
+    <li>Николаев</li>
+</ol>
+
+<h2>Список студентов</h2>
+<ol>
+    <li>Иванов
+        <ul class="nested-list">
+            <li>возраст - 23 года</li>
+            <li>Курс - 3</li>
+        </ul>
+    </li>
+    <li>Петров
+        <ul class="nested-list">
+            <li>возраст - 19 лет</li>
+            <li>Курс - 2</li>
+        </ul>
+    </li>
+    <li>Сидоров
+        <ul class="nested-list">
+            <li>возраст - 18 лет</li>
+            <li>Курс - 1</li>
+        </ul>
+    </li>
+</ol>
+</body>
+</html>
