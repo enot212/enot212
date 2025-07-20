@@ -1,0 +1,46 @@
+/* 1. Ссылки внутри #test: красные, без подчёркивания; при наведении — голубые и подчёркнутые */
+#test a:link,
+#test a:visited {
+  color: red;
+  text-decoration: none;
+}
+
+#test a:hover {
+  color: skyblue;
+  text-decoration: underline;
+}
+
+/* 2. Все ссылки с классом www: голубые с подчёркиванием, при наведении — без подчёркивания */
+a.www:link,
+a.www:visited {
+  color: skyblue;
+  text-decoration: underline;
+}
+
+a.www:hover {
+  text-decoration: none;
+}
+
+/* 3. Ссылки с классом www внутри #test: кастомные цвета */
+#test a.www:link,
+#test a.www:visited {
+  color: purple;
+  text-decoration: none;
+}
+
+#test a.www:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+/* 4. Ссылки с классом www внутри .eee: кастомные цвета */
+.eee a.www:link,
+.eee a.www:visited {
+  color: green;
+  text-decoration: underline;
+}
+
+.eee a.www:hover {
+  color: darkgreen;
+  text-decoration: none;
+}
