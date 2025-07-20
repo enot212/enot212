@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Таблица с ячейкой 1 на всю строку</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 400px;
+      height: 200px;
+    }
+    td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<table>
+  <tr>
+    <td colspan="3" align="left">ячейка 1</td>
+  </tr>
+  <tr>
+    <td align="left">ячейка 4</td>
+    <td rowspan="2" align="center" valign="middle">ячейка 5</td>
+    <td align="right">ячейка 6</td>
+  </tr>
+  <tr>
+    <td align="left">ячейка 8</td>
+    <td align="right">ячейка 9</td>
+  </tr>
+</table>
+</body>
+</html>
