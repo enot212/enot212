@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Списки</title>
+  <style>
+    body {
+      background-color: #0f111a;
+      color: #f3ecec;
+      font-family: sans-serif;
+    }
+
+    .content {
+      background-color: #f4eeee;
+      color: #120e0e;
+      padding: 20px;
+      width: fit-content;
+      margin: 20px;
+    }
+
+    ul.none {
+      list-style-type: none;
+      padding-left: 20px;
+    }
+
+    ul.custom-arrows {
+      list-style-type: none;
+      padding-left: 20px;
+    }
+
+    ul.custom-arrows li::before {
+      content: "▹";
+      color: orange;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+
+
+<div class="content">
+
+  <!-- Квадратные маркеры -->
+  <ul style="list-style-type: square;">
+    <li>Красный</li>
+    <li>Жёлтый</li>
+    <li>Зелёный</li>
+    <li>Синий</li>
+  </ul>
+
+  <!-- Кружочки -->
+  <ul style="list-style-type: circle;">
+    <li>Красный</li>
+    <li>Жёлтый</li>
+    <li>Зелёный</li>
+    <li>Синий</li>
+  </ul>
+
+  <!-- Стандартные круглые -->
+  <ul style="list-style-type: disc;">
+    <li>Красный</li>
+    <li>Жёлтый</li>
+    <li>Зелёный</li>
+    <li>Синий</li>
+  </ul>
+
+  <!-- Без маркеров -->
+  <ul class="none">
+    <li>Красный</li>
+    <li>Жёлтый</li>
+    <li>Зелёный</li>
+    <li>Синий</li>
+  </ul>
+
+  <!-- Кастомные стрелки -->
+  <ul class="custom-arrows">
+    <li>Красный</li>
+    <li>Жёлтый</li>
+    <li>Зелёный</li>
+    <li>Синий</li>
+  </ul>
+
+  <!-- Обычный нумерованный список -->
+  <ol type="1">
+    <li>Иванов</li>
+    <li>Петров</li>
+    <li>Сидоров</li>
+    <li>Николаев</li>
+  </ol>
+
+  <!-- Нумерация греческими буквами -->
+  <ol style="list-style-type: lower-greek;">
+    <li>Иванов</li>
+    <li>Петров</li>
+    <li>Сидоров</li>
+    <li>Николаев</li>
+  </ol>
+
+  <!-- Нумерация заглавными латинскими -->
+  <ol type="A">
+    <li>Иванов</li>
+    <li>Петров</li>
+    <li>Сидоров</li>
+    <li>Николаев</li>
+  </ol>
+
+</div>
+
+</body>
+</html>
