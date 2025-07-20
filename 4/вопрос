@@ -1,0 +1,17 @@
+1. Внешний CSS (External CSS)
+ Описвние: CSS-файл хранится отдельно от HTML, подключается через тег <link>.
+ Пример из кода: <head>
+                   <link rel="stylesheet" href="style.css">
+                 </head>
+2. 2. Встроенные стили (классы) (Embedded / Internal CSS)
+CSS размещается внутри тега <style> в <head>.
+Пример из кода: <head>
+                  <style>
+                    h1 {
+                      color: red;
+                    }
+                  </style>
+                </head>
+3. Встроенные в тег (Inline CSS)
+Стили пишутся непосредственно в HTML-элементе, в атрибуте style.
+Пример из кода: <h2 style="color: green;">Заголовок</h2>
