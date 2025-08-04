@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Nullish и операторы присваивания</title>
+</head>
+<body>
+<script>
+    // 1. alert(undefined ?? NaN ?? null ?? "" ?? " ")
+    alert('undefined ?? NaN ?? null ?? "" ?? " " → ' + (undefined ?? NaN ?? null ?? "" ?? " "));
+
+    // 2. Проверка с city и ??=
+    let city = null;
+
+    city ??= "Берлин";
+    city ??= null;
+    city ??= "Кёльн";
+    city ??= "Гамбург";
+
+    alert('city после ??= → ' + city);
+
+    // 3. Переписанный код с ?? и ??=
+    let num1 = 10,
+        num2 = 20,
+        result;
+
+    // исходный код:
+    /*
+    if (result === null || result === undefined) {
+      if (num1 !== null && num1 !== undefined) {
+        result = num1;
+      } else {
+        result = num2;
+      }
+    }
+    */
+
+    // переписанный
+    result ??= (num1 ?? num2);
+
+    alert('result после result ??= (num1 ?? num2) → ' + result);
+</script>
+</body>
+</html>

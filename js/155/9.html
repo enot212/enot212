@@ -1,0 +1,15 @@
+<!-- sortByAge.html -->
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+    let arr = [
+        { name: "Вася", age: 25 },
+        { name: "Петя", age: 30 },
+        { name: "Маша", age: 28 }
+    ];
+    arr.sort((a, b) => a.age - b.age);
+    alert(arr.map(user => user.name)); // Вася,Маша,Петя
+</script>
+</body>
+</html>

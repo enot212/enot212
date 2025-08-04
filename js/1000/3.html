@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Map keys и .push()</title>
+</head>
+<body>
+<h2>Map и массив ключей</h2>
+<script>
+    let map = new Map();
+    map.set("name", "John");
+
+    // Ошибочный способ:
+    // let keys = map.keys(); // Это не массив
+
+    // Правильный способ:
+    let keys = Array.from(map.keys());
+    keys.push("more");
+
+    alert("Массив ключей: " + keys); // name,more
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Уникальные значения</title>
+</head>
+<body>
+<h2>Функция unique(arr)</h2>
+<script>
+    function unique(arr) {
+        return Array.from(new Set(arr));
+    }
+
+    let values = ["Hare", "Krishna", "Hare", "Krishna",
+        "Krishna", "Krishna", "Hare", "Hare", ":-O"];
+
+    alert("Уникальные значения: " + unique(values));
+</script>
+</body>
+</html>

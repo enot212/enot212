@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задачи по работе с датами</title>
+</head>
+<body>
+<h1>JS Задачи по Date</h1>
+<script>
+    // 1. Создание даты
+    let d1 = new Date(2012, 1, 20, 3, 12);
+    alert("1. Созданная дата: " + d1);
+
+    // 2. День недели в коротком формате
+    function getWeekDay(date) {
+        let days = ["ВС", "ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ"];
+        return days[date.getDay()];
+    }
+    let d2 = new Date(2012, 0, 3);
+    alert("2. День недели: " + getWeekDay(d2));
+
+    // 3. День недели в европейской нумерации
+    function getLocalDay(date) {
+        let day = date.getDay();
+        return day === 0 ? 7 : day;
+    }
+    alert("3. Европейский день недели: " + getLocalDay(d2));
+
+    // 4. Какой день был N дней назад
+    function getDateAgo(date, days) {
+        let copy = new Date(date);
+        copy.setDate(date.getDate() - days);
+        return copy.getDate();
+    }
+    let d4 = new Date(2015, 0, 2);
+    alert("4. 1 день назад: " + getDateAgo(d4, 1));
+    alert("4. 2 дня назад: " + getDateAgo(d4, 2));
+    alert("4. 365 дней назад: " + getDateAgo(d4, 365));
+
+    // 5. Последний день месяца
+    function getLastDayOfMonth(year, month) {
+        return new Date(year, month + 1, 0).getDate();
+    }
+    alert("5. Последний день февраля 2012: " + getLastDayOfMonth(2012, 1));
+
+    // 6. Сколько секунд прошло сегодня
+    function getSecondsToday() {
+        let now = new Date();
+        let start = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        return Math.floor((now - start) / 1000);
+    }
+    alert("6. Секунд прошло с начала дня: " + getSecondsToday());
+
+    // 7. Сколько секунд до завтра
+    function getSecondsToTomorrow() {
+        let now = new Date();
+        let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+        return Math.floor((tomorrow - now) / 1000);
+    }
+    alert("7. Секунд до завтра: " + getSecondsToTomorrow());
+
+    // 8. Форматирование относительной даты
+    function formatDate(date) {
+        let diff = new Date() - date;
+
+        if (diff < 1000) return "прямо сейчас";
+
+        let sec = Math.floor(diff / 1000);
+        if (sec < 60) return sec + " сек. назад";
+
+        let min = Math.floor(sec / 60);
+        if (min < 60) return min + " мин. назад";
+
+        let d = date;
+        let day = String(d.getDate()).padStart(2, '0');
+        let month = String(d.getMonth() + 1).padStart(2, '0');
+        let year = String(d.getFullYear()).slice(-2);
+        let hour = String(d.getHours()).padStart(2, '0');
+        let min2 = String(d.getMinutes()).padStart(2, '0');
+
+        return `${day}.${month}.${year} ${hour}:${min2}`;
+    }
+
+    alert("8. Формат 1 мс назад: " + formatDate(new Date(new Date - 1)));
+    alert("8. Формат 30 сек назад: " + formatDate(new Date(new Date - 30 * 1000)));
+    alert("8. Формат 5 мин назад: " + formatDate(new Date(new Date - 5 * 60 * 1000)));
+    alert("8. Формат 1 день назад: " + formatDate(new Date(new Date - 86400 * 1000)));
+</script>
+</body>
+</html>

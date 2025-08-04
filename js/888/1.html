@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>pow(x, n)</title>
+</head>
+<body>
+
+<script>
+    let x = +prompt("Введите число x:", "");
+    let n = +prompt("Введите степень n (натуральное число):", "");
+
+    if (n < 1) {
+        alert("Степень n должна быть натуральным числом (от 1 и выше)");
+    } else {
+        alert(pow(x, n));
+    }
+
+    function pow(x, n) {
+        let result = 1;
+        for (let i = 0; i < n; i++) {
+            result *= x;
+        }
+        return result;
+    }
+</script>
+
+</body>
+</html>

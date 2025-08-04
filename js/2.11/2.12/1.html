@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Циклы и условия — примеры и объяснения</title>
+</head>
+<body>
+<script>
+    // 1. Цикл while с i--
+    let i = 3;
+    alert("1) Вывод цикла while (i--), где i=3:");
+    while (i) {
+        alert(i--);
+    }
+    // Объяснение: выводит 3, 2, 1 — потом i становится 0 и цикл заканчивается
+
+    // 2. Циклы while с префиксным и постфиксным ++
+    alert("2) Цикл while (++i < 5):");
+    i = 0;
+    while (++i < 5) alert(i); // 1,2,3,4
+
+    alert("3) Цикл while (i++ < 5):");
+    i = 0;
+    while (i++ < 5) alert(i); // 1,2,3,4,5
+
+    // 3. Циклы for с постфиксным и префиксным ++
+    alert("4) Цикл for с i++:");
+    for (let i = 0; i < 5; i++) alert(i); // 0,1,2,3,4
+
+    alert("5) Цикл for с ++i:");
+    for (let i = 0; i < 5; ++i) alert(i); // 0,1,2,3,4
+
+    // 4. Вывод чётных чисел от 2 до 10
+    alert("6) Чётные числа от 2 до 10:");
+    for (let i = 2; i <= 10; i += 2) alert(i); // 2,4,6,8,10
+
+    // 5. Заменить for на while
+    alert("7) Цикл while вместо for:");
+    i = 0;
+    while (i < 3) {
+        alert(`number ${i}!`);
+        i++;
+    }
+
+    // 6. Повторять prompt, пока не введут число > 100 или не нажмут Отмена
+    alert("8) Введите число больше 100 (пока не введёте, будет повторяться):");
+    let num;
+    do {
+        num = prompt("Введите число больше 100", "");
+        if (num === null) break; // отмена
+    } while (num !== null && +num <= 100);
+
+    // 7. Вывести простые числа от 2 до n
+    alert("9) Простые числа от 2 до 10:");
+    let n = 10;
+
+    nextPrime:
+        for (let i = 2; i <= n; i++) {
+            for (let j = 2; j < i; j++) {
+                if (i % j === 0) {
+                    continue nextPrime; // число не простое
+                }
+            }
+            alert(i); // простое число
+        }
+</script>
+</body>
+</html>

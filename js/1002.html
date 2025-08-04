@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON задачи</title>
+</head>
+<body>
+<script>
+    // ЗАДАЧА 1: Сериализация и десериализация user
+    let user = {
+        name: "Василий Иванович",
+        age: 35
+    };
+
+    let json = JSON.stringify(user);
+    let user2 = JSON.parse(json);
+
+    alert("JSON user: " + json);
+    alert("user2.name: " + user2.name + ", age: " + user2.age);
+
+    // ЗАДАЧА 2: Удаление циклических ссылок из объекта meetup
+    let room = {
+        number: 23
+    };
+
+    let meetup = {
+        title: "Совещание",
+        occupiedBy: [{name: "Иванов"}, {name: "Петров"}],
+        place: room
+    };
+
+    // Создание циклов
+    room.occupiedBy = meetup;
+    meetup.self = meetup;
+
+    let json2 = JSON.stringify(meetup, function replacer(key, value) {
+        return (key !== "" && value === meetup) ? undefined : value;
+    }, 2);
+
+    alert("JSON meetup (без циклов):\n" + json2);
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Фильтрация анаграмм</title>
+</head>
+<body>
+<h2>Функция aclean(arr)</h2>
+<script>
+    function aclean(arr) {
+        let map = new Map();
+
+        for (let word of arr) {
+            let sorted = word.toLowerCase().split('').sort().join('');
+            map.set(sorted, word);
+        }
+
+        return Array.from(map.values());
+    }
+
+    let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+    alert("Очищенный список без анаграмм: " + aclean(arr));
+</script>
+</body>
+</html>

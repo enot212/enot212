@@ -1,0 +1,26 @@
+<!-- calculator.html -->
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+    function Calculator() {
+        this.methods = {
+            "+": (a, b) => a + b,
+            "-": (a, b) => a - b
+        };
+        this.calculate = function(str) {
+            let [a, op, b] = str.split(' ');
+            a = +a;
+            b = +b;
+            return this.methods[op]?.(a, b);
+        };
+        this.addMethod = function(name, func) {
+            this.methods[name] = func;
+        };
+    }
+    let calc = new Calculator();
+    calc.addMethod("*", (a, b) => a * b);
+    alert(calc.calculate("3 * 7")); // 21
+</script>
+</body>
+</html>

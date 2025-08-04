@@ -1,0 +1,17 @@
+<!-- getAverageAge.html -->
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+    function getAverageAge(users) {
+        return users.reduce((sum, user) => sum + user.age, 0) / users.length;
+    }
+    let arr = [
+        { name: "Вася", age: 25 },
+        { name: "Петя", age: 30 },
+        { name: "Маша", age: 29 }
+    ];
+    alert(getAverageAge(arr)); // 28
+</script>
+</body>
+</html>
