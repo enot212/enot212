@@ -1,19 +1,19 @@
 <template>
-  <div class="calculator">
-    <div class="display">{{ display }}</div>
-    <button
-        v-for="btn in buttons"
-        :key="btn"
-        @click="press(btn)"
-    >
-      {{ btn }}
-    </button>
-  </div>
+<div class="calculator">
+<div class="display">{{ display }}</div>
+<button
+    v-for="btn in buttons"
+    :key="btn"
+    @click="press(btn)"
+>
+  {{ btn }}
+</button>
+</div>
 </template>
 
 <script>
 export default {
-  name: 'Calculator',
+  name: 'BasicCalculator',
   data() {
     return {
       display: '0',
@@ -26,37 +26,49 @@ export default {
   methods: {
     press(value) {
       if (!isNaN(value)) {
-        // Нажата цифра
+        // нажата цифра
         if (this.waitingForSecond) {
-          this.display = value;
+          this.display = this.display + value; // добавляем число после знака
           this.waitingForSecond = false;
         } else {
           this.display = this.display === '0' ? value : this.display + value;
         }
       }
       else if (['+','-','*','/'].includes(value)) {
-        // Нажат оператор
-        this.firstNumber = parseFloat(this.display);
+        // оператор
+        if (this.firstNumber !== null && !this.waitingForSecond) {
+          this.calculate(parseFloat(this.getSecondNumber()));
+        } else {
+          this.firstNumber = parseFloat(this.display);
+        }
         this.operator = value;
+        this.display = this.firstNumber.toString() + ' ' + this.operator + ' ';
         this.waitingForSecond = true;
       }
       else if (value === '=') {
-        // Вычисление вручную
+        // равно
         if (this.operator && this.firstNumber !== null) {
-          const secondNumber = parseFloat(this.display);
-          let result = 0;
-          switch (this.operator) {
-            case '+': result = this.firstNumber + secondNumber; break;
-            case '-': result = this.firstNumber - secondNumber; break;
-            case '*': result = this.firstNumber * secondNumber; break;
-            case '/': result = secondNumber !== 0 ? this.firstNumber / secondNumber : 'Ошибка'; break;
-          }
-          this.display = result.toString();
-          this.firstNumber = null;
+          const secondNumber = parseFloat(this.getSecondNumber());
+          this.calculate(secondNumber, true);
           this.operator = null;
-          this.waitingForSecond = false;
         }
       }
+    },
+    calculate(secondNumber, isEqual = false) {
+      let result = 0;
+      switch (this.operator) {
+        case '+': result = this.firstNumber + secondNumber; break;
+        case '-': result = this.firstNumber - secondNumber; break;
+        case '*': result = this.firstNumber * secondNumber; break;
+        case '/': result = secondNumber !== 0 ? this.firstNumber / secondNumber : 0; break;
+      }
+      this.display = isEqual ? result.toString() : result.toString() + ' ' + this.operator + ' ';
+      this.firstNumber = result;
+      this.waitingForSecond = true;
+    },
+    getSecondNumber() {
+      const parts = this.display.split(' ');
+      return parts[2] || '0';
     }
   }
 }
@@ -64,7 +76,7 @@ export default {
 
 <style scoped>
 .calculator {
-  width: 200px;
+  width: 220px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 5px;
@@ -77,6 +89,7 @@ export default {
   font-size: 20px;
   background: #f0f0f0;
   border: 1px solid #ccc;
+  overflow: hidden;
 }
 button {
   padding: 15px;
@@ -84,3 +97,4 @@ button {
   cursor: pointer;
 }
 </style>
+
